@@ -8,7 +8,7 @@ ARG DENO_VERSION=0.37.1
 ENV DENO_VERSION=${DENO_VERSION}
 
 RUN set -x \
-    && curl -L -o /tmp/deno.zip https://github.com/denoland/deno/releases/download/v${DENO_VERSION}}/deno-x86_64-unknown-linux-gnu.zip \
+    && curl -L -o /tmp/deno.zip https://github.com/denoland/deno/releases/download/v${DENO_VERSION}/deno-x86_64-unknown-linux-gnu.zip \
     && unzip -d /usr/local/bin /tmp/deno.zip \
     && rm -rf /tmp/deno.zip \
     && chmod +x /usr/local/bin/deno
