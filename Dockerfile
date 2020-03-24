@@ -13,7 +13,7 @@ RUN set -x \
     && rm -rf /tmp/deno.zip \
     && chmod +x /usr/local/bin/deno
 
-FROM frolvlad/alpine-3.11_glibc-2.31
+FROM frolvlad/alpine-glibc:alpine-3.11_glibc-2.31
 
 COPY --from=downloader /usr/local/bin/deno /usr/local/bin/deno
 
